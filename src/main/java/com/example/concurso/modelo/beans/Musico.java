@@ -35,12 +35,18 @@ public class Musico extends Artista {
         this.instrumento = instrumento;
     }
 
+    @Override
+    public TiposArtistas getTipo() {
+        return TIPO;
+    }
+
+    @Override
     public String toString() {
         return (getID()+":"+getNombre()+":"+getTituloMelodia()+getInstrumento());
     }
+    @Override
     public String actuar() {
         return "Voy a interpretar la melodía "+tituloMelodia+" con "+ getInstrumento();
     }
-
 
 }

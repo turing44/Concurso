@@ -1,6 +1,6 @@
 package com.example.concurso.modelo.beans;
 
-import java.util.HashMap;
+
 import java.util.Map;
 
 /**
@@ -17,7 +17,13 @@ public abstract class Artista {
     protected Artista(int ID, String nombre, Map<String, String> atributosEspecificos) {
         this.ID = ID;
         this.nombre = nombre;
+        this.atributosEspecificos = atributosEspecificos;
     }
+
+    public abstract TiposArtistas getTipo();
+    public Map<String, String> getAtributosEspecificos() {
+        return atributosEspecificos;
+    };
 
     public int getPuntuacion() {
         return puntuacion;
@@ -44,7 +50,7 @@ public abstract class Artista {
         this.nombre = nombre;
     }
 
-
+    public abstract String toString();
     public abstract String actuar();
     public String saludar() {
         return "Hola, me llamo "+this.nombre+", saludos!";

@@ -1,8 +1,7 @@
 package com.example.concurso.modelo.beans;
 
-import java.util.HashMap;
-import java.util.Map;
 
+import java.util.Map;
 
 public class Poeta extends Artista {
     // lo hago estatico porq esta bien que to el programa sepa que un artista es de tipo artista
@@ -18,6 +17,7 @@ public class Poeta extends Artista {
     }
 
 
+
     public String getTituloPoema() {
         return tituloPoema;
     }
@@ -26,12 +26,17 @@ public class Poeta extends Artista {
         this.tituloPoema = tituloPoema;
     }
 
+    @Override
+    public TiposArtistas getTipo() {
+        return TIPO;
+    }
+
+    @Override
     public String toString() {
         return (getID()+":"+getNombre()+":"+getTituloPoema());
     }
 
-
-
+    @Override
     public String actuar() {
         return "Voy a recitar el poema "+ getTituloPoema();
     }

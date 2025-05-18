@@ -3,7 +3,8 @@ package com.example.concurso.modelo.beans;
 import java.util.Map;
 
 public class Cantante extends Artista {
-    private static final TiposArtistas TIPO = TiposArtistas.CANTANTE;
+    public static final TiposArtistas TIPO = TiposArtistas.CANTANTE;
+
     private String tituloCancion;
 
     public Cantante(int ID, String nombre, String tituloCancion) {
@@ -12,18 +13,22 @@ public class Cantante extends Artista {
     }
 
 
-
     public String getTituloCancion() {
         return tituloCancion;
     }
-
     public void setTituloCancion(String tituloCancion) {
         this.tituloCancion = tituloCancion;
     }
+
+    @Override
+    public TiposArtistas getTipo() {
+        return TIPO;
+    }
+
+    @Override
     public String toString() {
         return (getID()+":"+getNombre()+":"+getTituloCancion());
     }
-
 
     @Override
     public String actuar() {

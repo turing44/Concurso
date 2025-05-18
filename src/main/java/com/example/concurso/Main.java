@@ -1,5 +1,7 @@
 package com.example.concurso;
 
+import com.example.concurso.modelo.beans.Artista;
+import com.example.concurso.modelo.beans.Cantante;
 import com.example.concurso.modelo.beans.Poeta;
 import com.example.concurso.modelo.beans.TiposArtistas;
 import javafx.application.Application;
@@ -21,13 +23,11 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        TiposArtistas[] tipos = TiposArtistas.values();
-        for (TiposArtistas tipo : tipos) {
-            System.out.println(tipo.getTipo());
-        }
 
+        Cantante robe = new Cantante(21, "Roberto", "En el fondo del mar");
 
-        System.exit(0);
+        System.out.println(((Artista) robe).getClass());
+        ;
         //launch();
     }
 }

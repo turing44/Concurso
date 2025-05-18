@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.concurso.controlador.HelloController">
+<VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="323.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.concurso.controlador.MainController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="73.0" text="ID artista: " />
+            <TextField fx:id="campoId" promptText="Ejemplo: 34" />
+         </children>
+      </HBox>
+      <HBox fx:id="contenedorSelectorEspecialidad" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="58.0" text="Datos" />
+            <Label prefHeight="17.0" prefWidth="96.0" text="Especialidad" />
+            <ComboBox fx:id="deplegableEspecialidad" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="contenedorAtributos" prefHeight="100.0" prefWidth="200.0" />
+      <HBox fx:id="contenedorPuntuacionYGuardar" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="25.0" prefWidth="93.0" text="Puntuación: " />
+            <Spinner fx:id="spinnerPuntuacion" prefHeight="25.0" prefWidth="62.0" />
+            <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardar" prefHeight="25.0" prefWidth="70.0" text="Guardar" />
+         </children>
+      </HBox>
+   </children>
 </VBox>
