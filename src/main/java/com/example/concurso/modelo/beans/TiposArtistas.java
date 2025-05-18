@@ -1,7 +1,7 @@
 package com.example.concurso.modelo.beans;
 
 public enum TiposArtistas {
-    CANTANTE("Cantante", new String[]{"Canción"}),
+    CANTANTE("Cantante", new String[]{"Cancion"}),
     MUSICO("Musico", new String[]{"Melodia", "Instrumento"}),
     POETA("Poeta", new String[]{"Poema"});
 

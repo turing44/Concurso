@@ -12,13 +12,6 @@ public class Validador {
         validarAtributosGenerales(artista);
         validarAtributosEspecificos(artista);
     }
-    public static void validarIdDisponible(int id, List<Artista> artistas) throws IllegalArgumentException{
-        for (Artista artista : artistas) {
-            if (artista.getID() == id) {
-                throw new IllegalArgumentException("El id del artista ya existe");
-            }
-        }
-    }
 
     private static void validarAtributosGenerales(Artista artista) throws IllegalArgumentException {
         if (artista == null) {
@@ -28,6 +21,9 @@ public class Validador {
         }
     }
 
+    public static void validarIdDisponible(Integer id, List<Integer> lista) throws IllegalArgumentException {
+
+    }
 
     private static void validarAtributosEspecificos(Artista artista) throws IllegalArgumentException{
         String[] atributos = artista.getTipo().getAtributos();

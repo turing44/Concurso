@@ -42,7 +42,7 @@ public class Musico extends Artista {
 
     @Override
     public String toString() {
-        return (getID()+":"+getNombre()+":"+getTituloMelodia()+getInstrumento());
+        return (getID()+":"+getNombre()+":"+getTituloMelodia()+getInstrumento()+":"+getPuntuacion());
     }
     @Override
     public String actuar() {

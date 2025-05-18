@@ -33,7 +33,7 @@ public class Poeta extends Artista {
 
     @Override
     public String toString() {
-        return (getID()+":"+getNombre()+":"+getTituloPoema());
+        return (getID()+":"+getNombre()+":"+getTituloPoema()+":"+getPuntuacion());
     }
 
     @Override

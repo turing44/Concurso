@@ -27,7 +27,7 @@ public class Cantante extends Artista {
 
     @Override
     public String toString() {
-        return (getID()+":"+getNombre()+":"+getTituloCancion());
+        return (getID()+":"+getNombre()+":"+getTituloCancion()+":"+getPuntuacion());
     }
 
     @Override

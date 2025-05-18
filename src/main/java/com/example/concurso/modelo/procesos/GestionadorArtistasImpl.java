@@ -14,6 +14,7 @@ import java.util.Optional;
 public class GestionadorArtistasImpl implements GestionadorArtistas {
 
     private List<Artista> artistas = new ArrayList<>();
+    private List<Integer> idsArtistasGuardados = new ArrayList<>();
     private Archivador archivador = new Archivador("resutados.txt");
 
     public GestionadorArtistasImpl() throws IOException {
@@ -41,9 +42,8 @@ public class GestionadorArtistasImpl implements GestionadorArtistas {
     @Override
     public void guardarArtista(Artista nuevoArtista) throws IllegalArgumentException, IOException {
         Validador.validarArtista(nuevoArtista);
-        // es correcto pasarle la lista de artistas?
-        Validador.validarIdDisponible(nuevoArtista.getID(), artistas);
-        artistas.add(nuevoArtista);
+        Validador.validarIdDisponible(nuevoArtista.getID(), idsArtistasGuardados);
+        idsArtistasGuardados.add(nuevoArtista.getID());
         archivarArtista(nuevoArtista);
     }
 
